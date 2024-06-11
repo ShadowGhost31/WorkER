@@ -1,0 +1,86 @@
+.job-card {
+    height: 100%; /* забезпечує однакову висоту карток */
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-title {
+    margin-bottom: 1rem; /* додатковий відступ під заголовком */
+}
+
+.card-address {
+    flex-grow: 1; /* займає всю доступну висоту між заголовком і зарплатою */
+    height: 50px; /* фіксована висота для тексту адреси */
+    overflow: hidden; /* обрізає текст, який не поміщається */
+    text-overflow: ellipsis; /* додає три крапки в кінці обрізаного тексту */
+    white-space: nowrap; /* текст не переноситься на новий рядок */
+}
+
+.card-text.text-muted {
+    margin-top: 1rem; /* додатковий відступ перед зарплатою */
+}
+.header-wrapper {
+    background-color: #af4f4f;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.content-wrapper {
+    background-color: #fff9f9;
+    border: 1px solid #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+}
+
+body {
+    background-color: #95bbd8;
+}
+
+.custom-card {
+    width: 22rem;
+    height: 15rem;
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero {
+    background-size: cover;
+    color: #040202;
+    padding: 10px 0;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+}
+
+.job-card:hover {
+    background-color: #f8f9fa;
+    cursor: pointer;
+}
+
+.resume-section {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+}
+
+.resume-section h2 {
+    margin-bottom: 10px;
+}
+
+.resume-section p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}

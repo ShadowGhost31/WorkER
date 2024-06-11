@@ -9,7 +9,6 @@ $this->Title2 = 'Оголошення';
         <?php foreach ($this->paramsArray as $ad): ?>
             <div class="col-md-4 mb-4">
                 <div class="card custom-card">
-                    <img src="<?php /*= $ad['image_url']*/ ?>" class="card-img-top w-100">
                     <div class="card-body d-flex flex-column">
                         <div class="flex-grow-1">
                             <h5 class="card-title"><?= $ad['title'] ?></h5>

@@ -12,7 +12,7 @@ use models\vacancies;
 class VacanciesController extends Controller
 {
     // VacanciesController/add
-    public function actionadd(){
+    public function actionAdd(){
         $logger_user = Core::get()->session->get('user');
         $id = $logger_user['id'];
         if ($this->isPost)
@@ -126,6 +126,11 @@ class VacanciesController extends Controller
         $logger_user = Core::get()->session->get('user');
         $id = $logger_user['id'];
         $condition = array('user_id' => $id);
+        $resume = vacancies::findByCondition($condition);
+        if (!$resume) {
+            $this->addErrorMessage('У вас немає створених вакансій');
+            return $this->redirect('/vacancies/add');
+        }
         $this->template->setParams(vacancies::findByCondition($condition));
         return $this->render();
     }
@@ -140,7 +145,7 @@ class VacanciesController extends Controller
     }
     public function actionIndex(){
         if ($this->isPost){
-            $this->template->setParams(vacancies::SortBy('up',$this->post->sort));
+            $this->template->setParams(vacancies::SortBy($this->post->order,$this->post->sort));
         }
         else
             $this->template->setParams(vacancies::findAll());

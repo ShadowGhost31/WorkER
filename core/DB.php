@@ -74,7 +74,7 @@ class DB
                 $fields_string = $fields;
             else
                 $fields_string = "*";
-            if ($upd === 'up'){
+            if ($upd === 'desc'){
                 $sql = "SELECT {$fields_string} FROM {$table} ORDER BY {$parametr} ASC";
             }
             else{

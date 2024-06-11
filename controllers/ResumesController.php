@@ -108,8 +108,9 @@ class ResumesController extends Controller
     }
     public function actionDelete($params)
     {
-        $id = $params[0];
-        resumes::deleteById($id);
+        $logger_user = Core::get()->session->get('user');
+        $ids = $logger_user['id'];
+        resumes::deleteByUId($ids);
         $this->addErrorMessage('Резюме було успішно видалено');
         $logger_user = Core::get()->session->get('user');
         $ids = $logger_user['id'];

@@ -33,33 +33,6 @@ $this->Title2 = 'Резюме';
                     </div>
                 <?php endforeach; ?>
             </div>
-        </div>
-
-        <!-- Фільтри та сортування -->
-        <div class="col-md-3">
-            <h4>Фільтри</h4>
-            <form method="GET" action="">
-                <!-- Додайте тут ваші фільтри -->
-                <div class="form-group">
-                    <label for="salary">Зарплата</label>
-                    <input type="number" class="form-control" id="salary" name="salary" placeholder="Зарплата від">
-                    <input type="number" class="form-control" id="salary" name="salary" placeholder="Зарплата до">
-                </div>
-                <div class="form-group">
-                    <label for="location">Місцезнаходження</label>
-                    <input type="text" class="form-control" id="location" name="location" placeholder="Місцезнаходження">
-                </div>
-                <div class="form-group">
-                    <label for="sort">Сортувати за</label>
-                    <select class="form-control" id="sort" name="sort">
-                        <option value="date">Дата</option>
-                        <option value="salary">Зарплата</option>
-                        <!-- Додайте інші параметри сортування, якщо потрібно -->
-                    </select>
-                </div>
-                <button type="submit" class="btn btn-primary mt-2">Застосувати</button>
-            </form>
-        </div>
     </div>
 </div>
 </body>

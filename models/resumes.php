@@ -42,5 +42,4 @@ class resumes extends Model
         $resume->user_id = $user_id;
         $resume->save();
     }
-
 }

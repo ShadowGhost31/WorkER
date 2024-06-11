@@ -45,7 +45,7 @@ $this->Title2 = 'Редагування Резюме:';
 
     <div class="col-12">
         <button type="submit" class="btn btn-primary">Оновити</button>
-        <a href="/vacancies/delete/<?= $this->paramsArray['id'] ?>" class="btn btn-danger"
+        <a href="/resumes/delete/<?= $this->paramsArray['id'] ?>" class="btn btn-danger"
            onclick="return confirm('Ви впевнені, що хочете видалити це резюме?');">Видалити</a>
     </div>
 </form>

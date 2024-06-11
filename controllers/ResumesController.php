@@ -99,7 +99,7 @@ class ResumesController extends Controller
                     date("Y-m-d H:i:s"),
                     $id
                 );
-                return $this->redirect('/vacancies/myvacancies');
+                return $this->redirect('/resumes/myresume');
             }
         }
         $conf = resumes::findByUId($id);

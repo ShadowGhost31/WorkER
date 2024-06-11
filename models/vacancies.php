@@ -2,6 +2,7 @@
 
 namespace models;
 
+use core\Core;
 use core\Model;
 
 /**
@@ -45,5 +46,9 @@ class vacancies extends Model
         $vacancy->data = $data;
         $vacancy->user_id = $user_id;
         $vacancy->save();
+    }
+    public static function SortBy($upd, $param = 'salary')
+    {
+       return Core::get()->db->sorted($upd,$param,static::$tableName,'*');
     }
 }

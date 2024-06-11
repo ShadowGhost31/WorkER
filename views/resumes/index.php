@@ -8,7 +8,10 @@ $this->Title2 = 'Резюме';
     </div>
 <?php endif; ?>
 
+<style>
 
+
+</style>
 <body >
 <div class="container my-5">
     <div class="row">

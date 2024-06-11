@@ -139,7 +139,11 @@ class VacanciesController extends Controller
         return $this->redirect('/vacancies');
     }
     public function actionIndex(){
-        $this->template->setParams(vacancies::findAll());
+        if ($this->isPost){
+            $this->template->setParams(vacancies::SortBy('up',$this->post->sort));
+        }
+        else
+            $this->template->setParams(vacancies::findAll());
             return $this->render();
     }
     public function actionView($params){

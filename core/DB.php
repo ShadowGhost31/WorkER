@@ -65,6 +65,26 @@ class DB
         $sth->execute();
         return $sth->fetchAll();
     }
+    public function sorted($upd,$parametr,$table,$fields = "*")
+    {
+        if (is_array($fields))
+            $fields_string = implode(',', $fields);
+        else
+            if (is_string($fields))
+                $fields_string = $fields;
+            else
+                $fields_string = "*";
+            if ($upd === 'up'){
+                $sql = "SELECT {$fields_string} FROM {$table} ORDER BY {$parametr} ASC";
+            }
+            else{
+                $sql = "SELECT {$fields_string} FROM {$table} ORDER BY {$parametr} DESC";
+            }
+            $sth = $this->pdo->prepare($sql);
+            $sth->execute();
+            return $sth->fetchAll();
+    }
+
     public function insert($table, $row_to_insert)
     {
 

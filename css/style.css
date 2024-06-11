@@ -41,11 +41,28 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
     margin-bottom: 20px;
-    height: 100%; /* забезпечує однакову висоту карток */
+    height: 100%;
+    width: 25rem; /* Додайте ширину, яка вам потрібна */
+    max-width: 100%;/* забезпечує однакову висоту карток */
 }
 
 .job-card:hover {
     transform: translateY(-5px);
+}
+
+
+
+.custom-card:hover {
+    transform: translateY(-5px);
+}
+
+.job-card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    margin-bottom: 20px;
+    width: 100%; /* Змінено на 100% ширини */
 }
 
 .custom-card {
@@ -54,47 +71,39 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
     background-color: #fff;
-    width: 22rem;
-    height: 15rem;
-}
-
-.custom-card:hover {
-    transform: translateY(-5px);
+    width: 100%; /* Змінено на 100% ширини */
+    height: auto; /* Змінено на автоматичну висоту */
 }
 
 .card-body {
     display: flex;
     flex-direction: column;
+    justify-content: space-between; /* Рівномірний розподіл елементів по вертикалі */
     height: 100%;
+    padding: 20px; /* Додано внутрішні відступи */
 }
 
 .card-title {
-    margin-bottom: 1rem; /* додатковий відступ під заголовком */
     color: #007bff;
     font-weight: bold;
     font-size: 1.25rem;
-}
-
-.card-address {
-    flex-grow: 1; /* займає всю доступну висоту між заголовком і зарплатою */
-    height: 50px; /* фіксована висота для тексту адреси */
-    overflow: hidden; /* обрізає текст, який не поміщається */
-    text-overflow: ellipsis; /* додає три крапки в кінці обрізаного тексту */
-    white-space: nowrap; /* текст не переноситься на новий рядок */
+    margin-bottom: 10px; /* Зменшено відступи */
 }
 
 .card-text {
     color: #333;
     font-size: 1rem;
+    margin-bottom: 10px; /* Зменшено відступи */
 }
 
 .card-text.text-muted {
-    margin-top: 1rem; /* додатковий відступ перед зарплатою */
+    margin-top: auto; /* Переміщення тексту зарплати вниз картки */
 }
 
 .btn-primary {
     background-color: #007bff;
     border: none;
+    align-self: flex-end; /* Вирівнювання кнопки вправо */
 }
 
 .btn-primary:hover {

@@ -1,7 +1,9 @@
 <?php
 $this->Title = 'WORK_InD';
 $this->Title2 = 'Оголошення';
+
 ?>
+
 
 <body>
 <div class="container my-5">
@@ -29,7 +31,7 @@ $this->Title2 = 'Оголошення';
         <!-- Фільтри та сортування -->
         <div class="col-md-3">
             <h4>Фільтри</h4>
-            <form method="GET" action="">
+            <form method="post" action="">
                 <!-- Додайте тут ваші фільтри -->
                 <div class="form-group">
                     <label for="salary">Зарплата</label>
@@ -42,11 +44,11 @@ $this->Title2 = 'Оголошення';
                 </div>
                 <div class="form-group">
                     <label for="sort">Сортувати за</label>
-                    <select class="form-control" id="sort" name="sort">
-                        <option value="date">Дата</option>
-                        <option value="salary">Зарплата</option>
-                        <!-- Додайте інші параметри сортування, якщо потрібно -->
-                    </select>
+                        <select class="form-control" id="sort" name="sort">
+                            <option value="data" <?php if($this->controller->post->sort == 'data') echo 'selected'; ?>>Дата</option>
+                            <option value="salary" <?php if($this->controller->post->sort == 'salary') echo 'selected'; ?>>Зарплата</option>
+
+                        </select>
                 </div>
                 <button type="submit" class="btn btn-primary mt-2">Застосувати</button>
             </form>

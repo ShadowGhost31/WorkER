@@ -6,3 +6,98 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+# PHPStorm specific files and folders
+.idea/
+*.iml
+
+# Node.js dependencies
+node_modules/
+
+# Composer dependencies
+vendor/
+
+# Symfony cache and logs (if you're using Symfony)
+var/cache/
+var/logs/
+var/sessions/
+
+# Laravel specific
+bootstrap/cache/
+storage/
+
+# Yii2 specific
+runtime/
+web/assets/
+
+# Zend Framework 2 and 3 specific
+data/
+public/
+
+# Nette specific
+temp/
+log/
+
+# Symfony2 specific
+app/cache/
+app/logs/
+app/sessions/
+
+# Laravel 4 specific
+vendor/
+app/storage/
+
+# FuelPHP specific
+fuel/app/cache/
+fuel/app/logs/
+fuel/app/tmp/
+fuel/vendor/
+
+# CakePHP specific
+tmp/
+logs/
+
+# CodeIgniter specific
+application/cache/
+application/logs/
+
+# Kohana specific
+application/cache/
+application/logs/
+
+# WordPress specific
+wp-content/uploads/
+wp-content/upgrade/
+wp-content/cache/
+wp-content/backup/
+
+# Magento specific
+media/
+var/
+
+# Drupal specific
+sites/default/files/
+sites/default/settings.php
+
+# Cache and logs
+cache/
+logs/
+tmp/
+
+# Ignore IDE specific files
+*.sublime-project
+*.sublime-workspace
+*.idea/
+*.swp
+
+# Ignore OS specific files
+.DS_Store
+Thumbs.db
+
+# Miscellaneous
+composer.lock
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.phpunit.result.cache

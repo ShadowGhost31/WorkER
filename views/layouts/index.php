@@ -49,8 +49,7 @@ if (empty($Content))
                         <li><a href="/resumes" class="nav-link px-2 link-body-emphasis">Резюме</a></li>
                         <?php if (!Users::IsUserLogged()) : ?>
                             <li><a href="/users/login" class="nav-link px-2 link-body-emphasis">Увійти</a></li>
-                            <li><a href="/users/register" class="nav-link px-2 link-body-emphasis">Зареєструватися</a>
-                            </li>
+                            <li><a href="/users/register" class="nav-link px-2 link-body-emphasis">Зареєструватися</a></li>
                         <?php endif ?>
                     </ul>
 
@@ -67,7 +66,6 @@ if (empty($Content))
                                     <hr class="dropdown-divider">
                                 </li>
                                 <li><a class="dropdown-item" href="/users/logout">Вийти</a></li>
-
                             </ul>
                         </div>
                     <?php endif ?>
@@ -75,16 +73,16 @@ if (empty($Content))
             </div>
         </header>
         <div>
-            <div>
-                <div class="container content-wrapper">
-                    <h1 class="text-center"><?= $Title2 ?></h1>
-                    <?= $Content ?>
-                </div>
+            <div class="container content-wrapper">
+                <h1 class="text-center"><?= $Title2 ?></h1>
+                <?= $Content ?>
             </div>
             <footer class="py-3 my-4">
                 <p class="text-center text-body-secondary">© 2024 WED , Always Worked , Inc</p>
             </footer>
         </div>
+    </div>
+</div>
 </body>
 </html>
 <script>

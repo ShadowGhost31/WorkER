@@ -1,33 +1,29 @@
-.job-card {
-    height: 100%; /* забезпечує однакову висоту карток */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #95bbd8;
+    color: #333;
 }
 
-.card-body {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.card-title {
-    margin-bottom: 1rem; /* додатковий відступ під заголовком */
-}
-
-.card-address {
-    flex-grow: 1; /* займає всю доступну висоту між заголовком і зарплатою */
-    height: 50px; /* фіксована висота для тексту адреси */
-    overflow: hidden; /* обрізає текст, який не поміщається */
-    text-overflow: ellipsis; /* додає три крапки в кінці обрізаного тексту */
-    white-space: nowrap; /* текст не переноситься на новий рядок */
-}
-
-.card-text.text-muted {
-    margin-top: 1rem; /* додатковий відступ перед зарплатою */
-}
 .header-wrapper {
-    background-color: #af4f4f;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
     border-radius: 15px;
     padding: 20px;
     margin-top: 20px;
+}
+
+.header-wrapper .nav-link {
+    color: #007bff;
+    transition: color 0.3s;
+}
+
+.header-wrapper .nav-link:hover {
+    color: #0056b3;
+}
+
+.header-wrapper .dropdown-menu {
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .content-wrapper {
@@ -39,17 +35,91 @@
     margin: 20px 0;
 }
 
-body {
-    background-color: #95bbd8;
+.job-card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    margin-bottom: 20px;
+    height: 100%; /* забезпечує однакову висоту карток */
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
 }
 
 .custom-card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    background-color: #fff;
     width: 22rem;
     height: 15rem;
 }
+
+.custom-card:hover {
+    transform: translateY(-5px);
+}
+
 .card-body {
     display: flex;
     flex-direction: column;
+    height: 100%;
+}
+
+.card-title {
+    margin-bottom: 1rem; /* додатковий відступ під заголовком */
+    color: #007bff;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.card-address {
+    flex-grow: 1; /* займає всю доступну висоту між заголовком і зарплатою */
+    height: 50px; /* фіксована висота для тексту адреси */
+    overflow: hidden; /* обрізає текст, який не поміщається */
+    text-overflow: ellipsis; /* додає три крапки в кінці обрізаного тексту */
+    white-space: nowrap; /* текст не переноситься на новий рядок */
+}
+
+.card-text {
+    color: #333;
+    font-size: 1rem;
+}
+
+.card-text.text-muted {
+    margin-top: 1rem; /* додатковий відступ перед зарплатою */
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.row {
+    margin-bottom: 20px;
+}
+
+.card-img-top {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 180px;
+    object-fit: cover;
+}
+
+footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    border-top: 1px solid #e0e0e0;
 }
 
 .hero {

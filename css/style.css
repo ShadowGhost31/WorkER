@@ -42,8 +42,8 @@ body {
     transition: transform 0.2s;
     margin-bottom: 20px;
     height: 100%;
-    width: 25rem; /* Додайте ширину, яка вам потрібна */
-    max-width: 100%;/* забезпечує однакову висоту карток */
+    width: 25rem;
+    max-width: 100%;
 }
 
 .job-card:hover {
@@ -62,7 +62,7 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
     margin-bottom: 20px;
-    width: 100%; /* Змінено на 100% ширини */
+    width: 100%;
 }
 
 .custom-card {
@@ -71,8 +71,8 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
     background-color: #fff;
-    width: 100%; /* Змінено на 100% ширини */
-    height: auto; /* Змінено на автоматичну висоту */
+    width: 100%;
+    height: auto;
 }
 
 .card-body {

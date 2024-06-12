@@ -42,10 +42,15 @@ class Users extends Model
     public static function LogoutUser(){
         Core::get()->session->remove('user');
     }
+    public static function hashPassword($password)
+    {
+        return md5($password);
+    }
+
     public static function RegisterUser($login,$password,$firstname,$lastname){
         $user = new Users();
         $user->login = $login;
-        $user->password = $password;
+        $user->password = self::hashPassword($password);
         $user->firstname = $firstname;
         $user->lastname = $lastname;
         $user->save();

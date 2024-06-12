@@ -27,7 +27,7 @@ $this->Title2 = 'Резюме';
                                     <p class="card-text"><?= $ad['short_text'] ?></p>
                                     <p class="card-text text-muted">Номер телефону: <?= $ad['Telephone'] ?></p>
                                 </div>
-                                <a href="resumes/view/<?= $ad['id'] ?>" class="btn btn-primary mt-auto">Перейти</a>
+                                <a href="resumes/view/<?= $ad['user_id'] ?>" class="btn btn-primary mt-auto">Перейти</a>
                             </div>
                         </div>
                     </div>

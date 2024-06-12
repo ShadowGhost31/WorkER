@@ -11,7 +11,6 @@ use models\vacancies;
 
 class VacanciesController extends Controller
 {
-    // VacanciesController/add
     public function actionAdd(){
         $logger_user = Core::get()->session->get('user');
         $id = $logger_user['id'];
@@ -80,7 +79,7 @@ class VacanciesController extends Controller
             }
             if (strlen($this->post->short_text) === 0) {
                 $this->addErrorMessage('Короткий текст не вказано');
-            } elseif (strlen($this->post->short_text) > 60) {
+            } elseif (strlen($this->post->short_text) > 120) {
                 $this->addErrorMessage('Короткий текст занадто довгий. Максимальна довжина - 60 символів');
             }
             if (strlen($this->post->address) === 0) {
@@ -154,5 +153,8 @@ class VacanciesController extends Controller
     public function actionView($params){
         $this->template->setParams(vacancies::findById($params[0]));
           return $this->render();
+    }
+    public function actionError(){
+        echo 'error';
     }
 }

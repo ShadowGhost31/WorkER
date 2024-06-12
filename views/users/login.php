@@ -5,10 +5,9 @@ $this->Title2 = 'Сторінка авторизації';
 ?>
 
 <form method="post" action="">
-    <?php
-    if (!empty($errorMessage)) : ?>
+    <?php if (!empty($errorMessage)) : ?>
         <div class="alert alert-danger" role="alert">
-            <?=$errorMessage; ?>
+            <?= $errorMessage; ?>
         </div>
     <?php endif; ?>
     <div class="mb-3">
@@ -20,4 +19,5 @@ $this->Title2 = 'Сторінка авторизації';
         <input name="password" type="password" class="form-control" id="inputPassword">
     </div>
     <button type="submit" class="btn btn-primary">Увійти</button>
+    <p class="mt-3">Якщо ви ще не зареєстровані, можете перейти на <a href="/users/register">сторінку реєстрації</a>.</p>
 </form>

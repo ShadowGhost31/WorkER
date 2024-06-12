@@ -9,7 +9,6 @@ $this->Title2 = 'Оголошення';
 <div class="container my-5">
     <h1 class="mb-4 text-center"></h1>
     <div class="row">
-        <!-- Оголошення -->
         <div class="col-md-9">
             <div class="row">
                 <?php foreach ($this->paramsArray as $ad): ?>
@@ -30,7 +29,6 @@ $this->Title2 = 'Оголошення';
 
             </div>
         </div>
-        <!-- Фільтри та сортування -->
         <div class="col-md-3">
             <h4>Фільтри</h4>
             <form method="post" action="">
@@ -50,10 +48,8 @@ $this->Title2 = 'Оголошення';
                 <button type="submit" class="btn btn-primary mt-2">Застосувати</button>
             </form>
         </div>
-
-        <!-- Додати строчку -->
         <div class="col-md-9">
-            <hr> <!-- Розділова лінія -->
+            <hr>
         </div>
 
 

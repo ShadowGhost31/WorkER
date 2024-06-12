@@ -15,7 +15,7 @@ class UsersController extends Controller
         if (Users::IsUserLogged())
             return $this->redirect('/');
         if ($this->isPost){
-            $user = Users::FindByLoginAndPassword($this->post->login,$this->post->password);
+            $user = Users::FindByLoginAndPassword($this->post->login,Users::hashPassword($this->post->password));
             if (!empty($user)){
                 Users::LoginUser($user);
                 return $this->redirect('/');

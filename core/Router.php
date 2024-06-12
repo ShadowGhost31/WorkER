@@ -32,9 +32,8 @@ class Router
 
         $controller = 'controllers\\' . ucfirst($parts[0]) . 'Controller';
         $method = 'action' . ucfirst($parts[1]);
-
+        $controllerObject = new $controller();
         if (class_exists($controller)) {
-            $controllerObject = new $controller();
             Core::get()->controllerObject = $controllerObject;
             if (method_exists($controller, $method)) {
                 array_splice($parts, 0, 2);
@@ -45,7 +44,7 @@ class Router
         } else {
             $this->error(404);
         }
-        // RETURN
+        $this->error(404);
     }
     public function done()
     {

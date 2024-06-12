@@ -37,7 +37,7 @@ $this->Title2 = 'Головна сторінка';
 </div>
 
 
-<!-- Розмістіть резюме -->
+
 <div class="resume-section text-center">
     <div class="container">
         <h2>Розмістіть резюме</h2>

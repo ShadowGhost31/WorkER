@@ -1,7 +1,6 @@
 <?php
 $this->Title = 'WORK_InD';
-$this->Title2 = 'Оголошення';
-// Предполагаем, что у вас уже есть подключение к базе данных
+$this->Title2 = 'Резюме';
 ?>
 <body>
 <div class="container">

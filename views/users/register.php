@@ -13,7 +13,7 @@ $this->Title2 = 'Сторінка Реєстрації';
     <?php endif; ?>
     <div class="mb-3">
         <label for="inputEmail" class="form-label">Логін/Email</label>
-        <input value="<?= $this->controller->post->login  ?>" name=" login" type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp">
+        <input value="<?= $this->controller->post->login ?>" name="login" type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp">
     </div>
     <div class="mb-3">
         <label for="inputPassword" class="form-label">Пароль</label>
@@ -25,11 +25,12 @@ $this->Title2 = 'Сторінка Реєстрації';
     </div>
     <div class="mb-3">
         <label for="inputLastname" class="form-label">Прізвище</label>
-        <input value="<?= $this->controller->post->lastname  ?>" name="lastname" type="text" class="form-control" id="inputLastname">
+        <input value="<?= $this->controller->post->lastname ?>" name="lastname" type="text" class="form-control" id="inputLastname">
     </div>
     <div class="mb-3">
         <label for="inputFirstname" class="form-label">Ім'я</label>
-        <input value="<?= $this->controller->post->firstname  ?>" name="firstname" type="text" class="form-control" id="inputFirstname">
+        <input value="<?= $this->controller->post->firstname ?>" name="firstname" type="text" class="form-control" id="inputFirstname">
     </div>
     <button type="submit" class="btn btn-primary">Зареєструватися</button>
+    <p class="mt-3">Якщо ви вже зареєстровані, можете перейти на <a href="/users/login">сторінку авторизації</a>.</p>
 </form>

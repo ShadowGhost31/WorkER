@@ -6,6 +6,7 @@ use core\Controller;
 use core\Core;
 use core\Template;
 use models\resumes;
+use models\Users;
 use models\vacancies;
 
 class ResumesController extends Controller
@@ -56,6 +57,9 @@ class ResumesController extends Controller
     }
 
     public function actionMyresume(){
+        if(!Users::IsUserLogged()){
+            return $this->redirect('/users/register');
+        }
         $logger_user = Core::get()->session->get('user');
         $id = $logger_user['id'];
         $resume = resumes::findByUId($id);
@@ -121,7 +125,7 @@ class ResumesController extends Controller
         return $this->render();
     }
     public function actionView($params){
-        $this->template->setParams(resumes::findById($params[0]));
+        $this->template->setParams(resumes::findByUId($params[0]));
         return $this->render();
     }
 }

@@ -3,7 +3,6 @@
 /** @var Controller $controller */
 $this->Title = 'WORK_EDIT';
 $this->Title2 = 'Редагування Резюме:';
-var_dump($this);
 ?>
 <form class="row g-3" method="post">
     <?php if (!empty($errorMessage)) : ?>

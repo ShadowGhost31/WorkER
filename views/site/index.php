@@ -15,7 +15,7 @@ $this->Title2 = 'Головна сторінка';
             <?php
             $randomIndexes = array_rand($this->paramsArray, min(3, count($this->paramsArray)));
             if (!is_array($randomIndexes)) {
-                $randomIndexes = [$randomIndexes]; // Wrap the single index in an array
+                $randomIndexes = [$randomIndexes];
             }
             foreach ($randomIndexes as $index):
                 $ad = $this->paramsArray[$index];

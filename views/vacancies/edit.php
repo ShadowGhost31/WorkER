@@ -1,18 +1,8 @@
 <?php
 /** @var string $errorMessage повідомлення про помилку */
-/** @var Controller $controller */
-/** @var array $resumeData дані резюме для редагування */
 $this->Title = 'WORK_EDIT';
 $this->Title2 = 'Редагування Вакансії:';
 ?>
-
-<style>
-    .date-container {
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
-    }
-</style>
 
 <form class="row g-3 position-relative" method="post">
     <?php if (!empty($errorMessage)) : ?>
